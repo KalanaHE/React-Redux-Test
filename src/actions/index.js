@@ -15,3 +15,10 @@ export const toggleLogin = () => {
     type: "SIGN_IN",
   };
 };
+
+export const textChange = (input) => {
+  return {
+    type: "TEXT_CHANGE",
+    payload: input,
+  };
+};

@@ -2,6 +2,8 @@ import React from "react";
 import { useSelector } from "react-redux";
 import "./App.css";
 import ControlButtons from "./components/ControlButtons";
+import TextInput from "./components/TextInput";
+import TextView from "./components/TextView";
 
 function App() {
   const count = useSelector((state) => state.counter);
@@ -17,6 +19,10 @@ function App() {
         )}
         <br />
         <ControlButtons />
+        <br />
+        <TextView />
+        <br />
+        <TextInput />
       </header>
     </div>
   );
