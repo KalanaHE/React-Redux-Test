@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { increment, decrement, toggleLogin } from "../actions";
+import { increment, decrement, toggleLogin, requestAPIData } from "../actions";
 
 const ControlButtons = () => {
   const dispatch = useDispatch();
@@ -12,6 +12,8 @@ const ControlButtons = () => {
       <button onClick={() => dispatch(toggleLogin())}>
         Toggle Login/Logout
       </button>
+      <br />
+      <button onClick={() => dispatch(requestAPIData())}>Fetch</button>
     </div>
   );
 };
