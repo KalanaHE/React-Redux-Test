@@ -8,16 +8,17 @@ import TextView from "./components/TextView";
 function App() {
   const count = useSelector((state) => state.counter);
   const isLogged = useSelector((state) => state.isLogged);
-  const apidata = useSelector((state) => state);
+  let apidata = useSelector((state) => state.fetchapi);
+  apidata = JSON.stringify(apidata);
   console.log(apidata);
   return (
     <div className="App">
       <header className="App-header">
         <h1>{count}</h1>
         {isLogged ? (
-          <h3>Valuable information that unregistered users shouldn't see</h3>
+          <h3>{apidata}</h3>
         ) : (
-          <h3>Hidden content!</h3>
+          <h3>Content Hidden! Please Login to see</h3>
         )}
         <br />
         <ControlButtons />
